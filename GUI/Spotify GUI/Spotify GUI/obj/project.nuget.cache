@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "47KxqUjSr8WNrZsk7ZLK+dOYYBmIjmoVNrUKHT/shfqCyZ02Ws/NDFe15Dj9dmxLz7wKizQ7bWCV72XxL9U58w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cemay\\OneDrive - Universiteit Leiden\\Documents\\GitHub\\spotify-app\\GUI\\Spotify GUI\\Spotify GUI\\Spotify GUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cemay\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+  ],
+  "logs": []
+}
