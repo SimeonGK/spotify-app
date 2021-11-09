@@ -1,0 +1,20 @@
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\bin\Debug\netcoreapp3.1\Spotify GUI.exe
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\bin\Debug\netcoreapp3.1\Spotify GUI.deps.json
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\bin\Debug\netcoreapp3.1\Spotify GUI.runtimeconfig.json
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\bin\Debug\netcoreapp3.1\Spotify GUI.runtimeconfig.dev.json
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\bin\Debug\netcoreapp3.1\Spotify GUI.dll
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\bin\Debug\netcoreapp3.1\Spotify GUI.pdb
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI.csproj.AssemblyReference.cache
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI_MarkupCompile.cache
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI_MarkupCompile.lref
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI.g.resources
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI.AssemblyInfoInputs.cache
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI.AssemblyInfo.cs
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI.csproj.CoreCompileInputs.cache
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI.dll
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI.pdb
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\Spotify GUI\Spotify GUI\obj\Debug\netcoreapp3.1\Spotify GUI.genruntimeconfig.cache

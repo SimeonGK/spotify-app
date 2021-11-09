@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "604b98d3-a9a7-4612-b7f2-2d19fe371e24": {
+      "ProjectGuid": "604b98d3-a9a7-4612-b7f2-2d19fe371e24",
+      "DisplayName": "Spotify GUI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

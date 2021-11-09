@@ -1,0 +1,6 @@
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\CSV Form\CSV Form\obj\Debug\CSV Form.csproj.AssemblyReference.cache
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\CSV Form\CSV Form\obj\Debug\CSV Form.csproj.SuggestedBindingRedirects.cache
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\CSV Form\CSV Form\obj\Debug\CSV_Form.Form1.resources
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\CSV Form\CSV Form\obj\Debug\CSV_Form.Properties.Resources.resources
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\CSV Form\CSV Form\obj\Debug\CSV Form.csproj.GenerateResource.cache
+C:\Users\cemay\OneDrive - Universiteit Leiden\Documents\GitHub\spotify-app\GUI\CSV Form\CSV Form\obj\Debug\CSV Form.csproj.CoreCompileInputs.cache
