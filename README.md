@@ -18,6 +18,7 @@ To run the software, you need to install the following tools:
 * pandas
 * numpy
 * matplotlib
+* PyQt5
 
 ### (For developers:)
 
