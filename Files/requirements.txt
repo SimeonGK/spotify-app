@@ -2,3 +2,4 @@ pandas
 numpy 
 matplotlib
 pyqt5[all]
+seaborn

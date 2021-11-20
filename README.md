@@ -19,6 +19,7 @@ To run the software, you need to install the following tools:
 * numpy
 * matplotlib
 * PyQt5
+* seaborn
 
 ### (For developers:)
 
