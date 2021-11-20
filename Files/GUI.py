@@ -149,7 +149,7 @@ class Ui_MainWindow(object):
 	
 	def retranslateUi(self, MainWindow):
 		_translate = QtCore.QCoreApplication.translate
-		MainWindow.setWindowTitle(_translate("MainWindow", "PyShine simple plot"))
+		MainWindow.setWindowTitle(_translate("MainWindow", "Spotify Dataset"))
 		self.label.setText(_translate("MainWindow", "Select Theme"))
 		self.pushButton.setText(_translate("MainWindow", "Open"))
 		self.menuFile.setTitle(_translate("MainWindow", "File"))
