@@ -12,6 +12,7 @@ from matplotlib.figure import Figure
 import seaborn as sns
 import pandas as pd
 import sip 
+import sys
 from datetime import datetime
 
 
@@ -24,8 +25,7 @@ class MatplotlibCanvas(FigureCanvasQTAgg):
 		fig.tight_layout()
 		
 		
-
-class Ui_MainWindow(object):
+class Ui_MainWindow(QtWidgets.QWidget):
 	def setupUi(self, MainWindow):
 		MainWindow.setObjectName("MainWindow")
 		MainWindow.resize(1440, 1000)
@@ -58,12 +58,21 @@ class Ui_MainWindow(object):
 		self.comboBox_2 = QtWidgets.QComboBox(self.centralwidget)
 		self.comboBox_2.setObjectName("comboBox_2")
 		
+		self.label2 = QtWidgets.QLabel(self.centralwidget)
+		self.label2.setGeometry(QtCore.QRect(250, 20, 113, 20))
+		self.label2.setObjectName("label2") 
 
 		self.pushButton = QtWidgets.QPushButton(self.centralwidget)
 		self.pushButton.setObjectName("pushButton")
-		self.horizontalLayout.addWidget(self.pushButton)
+
+		self.pushButton_1 = QtWidgets.QPushButton(self.centralwidget)
+		self.pushButton_1.setObjectName("pushButton")
+
+		
 		spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
 		self.horizontalLayout.addItem(spacerItem)
+		self.horizontalLayout.addWidget(self.pushButton)
+		self.horizontalLayout.addWidget(self.pushButton_1)
 		self.horizontalLayout.addWidget(self.label_1)
 		self.horizontalLayout.addWidget(self.comboBox_1)
 		self.horizontalLayout.addWidget(self.label_2)
@@ -116,6 +125,7 @@ class Ui_MainWindow(object):
 		self.comboBox_2.addItems(['Select vertical axis here'])
 		
 		self.pushButton.clicked.connect(self.getFile)
+		self.pushButton_1.clicked.connect(self.takeinputs)
 		self.comboBox.currentIndexChanged['QString'].connect(self.Update)
 		self.comboBox_1.currentIndexChanged['QString'].connect(self.selectXaxis)
 		self.comboBox_2.currentIndexChanged['QString'].connect(self.selectYaxis)
@@ -124,6 +134,20 @@ class Ui_MainWindow(object):
 		self.dataset={}
 		self.x_axis_slt=None
 		self.y_axis_slt=None
+
+		  
+		
+ 
+		# Keeping the text of label empty initially.      
+		 
+
+		#self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+		#self.lineEdit.setGeometry(QtCore.QRect(160,110,113,20))
+		#self.lineEdit.setObjectName("lineEdit")
+		#self.pushButton = QtWidgets.QPushButton
+		
+		#self.pushButton1.clicked.connect(self.printt)
+		
 
 	def selectXaxis(self,value):
 		"""
@@ -267,11 +291,33 @@ class Ui_MainWindow(object):
 		self.label_1.setText(_translate("MainWindow", "X-axis"))
 		self.label_2.setText(_translate("MainWindow", "Y-axis"))
 		self.pushButton.setText(_translate("MainWindow", "Open"))
+		self.pushButton_1.setText(_translate("MainWindow", "Proceed"))
 		self.menuFile.setTitle(_translate("MainWindow", "File"))
 		self.actionOpen_csv_file.setText(_translate("MainWindow", "Open csv file"))
 		self.actionExit.setText(_translate("MainWindow", "Exit"))
 
-
+	def takeinputs(self):
+		name, done1 = QtWidgets.QInputDialog.getText(
+			self, 'Input Dialog', 'Enter your name:')
+		roll, done2 = QtWidgets.QInputDialog.getInt(
+		   self, 'Input Dialog', 'Enter your roll:') 
+		cgpa, done3 = QtWidgets.QInputDialog.getDouble(
+			  self, 'Input Dialog', 'Enter your CGPA:')
+ 
+		langs =['C', 'c++', 'Java', 'Python', 'Javascript']
+		lang, done4 = QtWidgets.QInputDialog.getItem(
+		  self, 'Input Dialog', 'Language you know:', langs)
+ 
+		if done1 and done2 and done3 and done4 :
+			 # Showing confirmation message along
+			 # with information provided by user.
+			self.label2.setText('Information stored Successfully')
+			self.label2.adjustSize()
+								 #+str(name)+'('+str(roll)+')'+'\n'+'CGPA: '
+								# +str(cgpa)+'\nSelected Language: '+str(lang))  
+  
+			 # Hide the pushbutton after inputs provided by the use.
+			self.pushButton_1.hide()     		
 
 if __name__ == "__main__":
 	import sys
