@@ -25,6 +25,8 @@ class SpotifyApp:
         self.data["Artist Followers"] = pd.to_numeric(self.data["Artist Followers"],errors = 'coerce')
         self.data["Tempo"] = pd.to_numeric(self.data["Tempo"],errors = 'coerce')
         self.data["Duration (ms)"] = pd.to_numeric(self.data["Duration (ms)"],errors = 'coerce')
+        #drop Null/NaN/NaT Values
+        self.data = self.data.dropna()
     
     def predict_streams(self, followers, tempo, duration):
         pass
