@@ -4,6 +4,8 @@ import seaborn as sns
 import os, sys
 import matplotlib.pyplot as plt
 sns.set(color_codes=True)
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
 
 """
 SpotifyApp class:
@@ -28,11 +30,35 @@ class SpotifyApp:
         #drop Null/NaN/NaT Values
         self.data = self.data.dropna()
     
+
+    
     def predict_streams(self, followers, tempo, duration):
-        pass
+        #create train and test set
+        train = self.data.drop(['Streams','Highest Charting Position','Index', 'Genre'], axis=1)
+        test = self.data['Streams']
+        x_train, x_test, y_train, y_test = train_test_split(train, test, test_size=0.3,random_state=2 )
+
+        #create regression model
+        regr = LinearRegression()
+        
+        #train regression model
+        regr.fit(x_train,y_train)
+
+        #predict total streams
+        pred = regr.predict(x_test)
+        
+        #check accuracy
+        acc = regr.score(x_test, y_test)
+        print(acc)
+        
+        #predict stream from input
+        input = [[followers, tempo, duration]]
+        streams = regr.predict(input)
+        return streams
     def predict_highest_chart(self, followers, tempo, duration, streams):
         pass
 
 #create instance of SpotifyApp class app
 app = SpotifyApp('spotify_dataset.csv')
-print(app.data.info())
+streams = app.predict_streams(48544923.0,161.993,182947.0)
+print(streams)
