@@ -16,9 +16,9 @@ multiple prediction functions
 class SpotifyApp:
     
     #Load dataset into SpotifyApp and clean it
-    def __init__(self, file) -> None:
+    def __init__(self, file_path) -> None:
         # load data set
-        self.file = pd.read_csv(file)
+        self.file = pd.read_csv(file_path)
         #load first 500 for developing
         self.file = self.file.iloc[:500]
         # clean data set
@@ -55,10 +55,11 @@ class SpotifyApp:
         input = [[followers, tempo, duration]]
         streams = regr.predict(input)
         return streams
+
     def predict_highest_chart(self, followers, tempo, duration, streams):
         pass
 
 #create instance of SpotifyApp class app
 app = SpotifyApp('spotify_dataset.csv')
-streams = app.predict_streams(48544923.0,161.993,182947.0)
+streams = app.predict_streams(4953667.0,142.169,155453.0)
 print(streams)
