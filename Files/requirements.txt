@@ -3,3 +3,5 @@ numpy
 matplotlib
 pyqt5[all]
 seaborn
+plotly
+sip

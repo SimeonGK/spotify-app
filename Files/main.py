@@ -62,4 +62,4 @@ class SpotifyApp:
 #create instance of SpotifyApp class app
 app = SpotifyApp('spotify_dataset.csv')
 streams = app.predict_streams(4953667.0,142.169,155453.0)
-print(streams)
+print(app)
