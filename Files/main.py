@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 sns.set(color_codes=True)
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+import GUI
 
 """
 SpotifyApp class:
@@ -42,10 +43,10 @@ class SpotifyApp:
         regr = LinearRegression()
         
         #train regression model
-        regr.fit(x_train,y_train)
+        regr.fit(x_train.values,y_train.values)
 
         #predict total streams
-        pred = regr.predict(x_test)
+        pred = regr.predict(x_test.values)
         
         #check accuracy
         acc = regr.score(x_test, y_test)
@@ -62,4 +63,4 @@ class SpotifyApp:
 #create instance of SpotifyApp class app
 app = SpotifyApp('spotify_dataset.csv')
 streams = app.predict_streams(4953667.0,142.169,155453.0)
-print(app)
+print(streams)

@@ -10,8 +10,7 @@ import seaborn as sns
 import pandas as pd
 import sip 
 import platform
-import prediction
-prediction.runscript()
+#import predictions_py
 
 op_sys = platform.system()
 if op_sys == 'Darwin':

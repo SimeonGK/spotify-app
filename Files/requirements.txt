@@ -6,3 +6,4 @@ pyqt5[all]
 seaborn
 plotly
 sip
+import-ipynb
