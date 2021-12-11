@@ -31,13 +31,12 @@ class SpotifyApp:
         #drop Null/NaN/NaT Values
         self.data = self.data.dropna()
     
-
-    
     def predict_streams(self, followers, tempo, duration):
         #create train and test set
         train = self.data.drop(['Streams','Highest Charting Position','Index', 'Genre'], axis=1)
         test = self.data['Streams']
-        x_train, x_test, y_train, y_test = train_test_split(train, test, test_size=0.3,random_state=2 )
+        x_train, x_test, y_train, y_test = train_test_split(train, test, test_size=0.3,random_state=2)
+        data=self.data
 
         #create regression model
         regr = LinearRegression()
@@ -55,12 +54,12 @@ class SpotifyApp:
         #predict stream from input
         input = [[followers, tempo, duration]]
         streams = regr.predict(input)
-        return streams
+        return streams, data
 
     def predict_highest_chart(self, followers, tempo, duration, streams):
         pass
 
 #create instance of SpotifyApp class app
 app = SpotifyApp('spotify_dataset.csv')
-streams = app.predict_streams(4953667.0,142.169,155453.0)
+streams, data = app.predict_streams(4953667.0,142.169,155453.0)
 print(streams)
