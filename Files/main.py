@@ -59,7 +59,3 @@ class SpotifyApp:
     def predict_highest_chart(self, followers, tempo, duration, streams):
         pass
 
-#create instance of SpotifyApp class app
-app = SpotifyApp('spotify_dataset.csv')
-streams, data = app.predict_streams(4953667.0,142.169,155453.0)
-print(streams)
