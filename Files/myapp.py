@@ -27,11 +27,10 @@ duration = st.number_input('Duration of the song in ms.: (ex. 155453)',step=1, v
 
 #def show_plot():
 #    data
-
+app = SpotifyApp('spotify_dataset.csv')
 
 if st.button('Train model'):
     with st.spinner("Training ongoing"):
-        app = SpotifyApp('spotify_dataset.csv')
         streams, datas = app.predict_streams(followers,tempo,duration)
         st.header(f'{name_song} will have an estimation of {round(streams[0])} streams!')
         fig = plt.figure()
