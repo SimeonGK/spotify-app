@@ -35,33 +35,23 @@ app = SpotifyApp('spotify_dataset.csv')
 
 if st.button('Predict'):
     with st.spinner("Training ongoing"):
-        streams, datas = app.predict_streams(followers,tempo,duration)
+        streams = app.predict_streams(followers,tempo,duration)
         st.header(f'Following our predicition algorithm we estimated that {name_song} will reach {round(streams[0])} streams!')
 #plot
 df = pd.read_csv("clean.csv") #get csv file
-st.header ('Scatter Plot') #tittle
+st.header ('Scatter Plot') #title
 st.write('To get a better understanding of the prediction we have provided a scatterplot of the data set.  ')
-st.write('The X and Y value can be changed using the selectboxes at the sidebar on the left.')
+st.write('The X  value can be changed using the selectboxes at the top of the plot.')
 st.write('We have also provided a local regression line to help us see the relationship between the axes. ')
-x_options = ['Artist Followers','Duration (ms)','Streams','Tempo'] #selectbox options
-x_axis = st.sidebar.selectbox('Select X-as', x_options)
-y_options = ['Streams','Duration (ms)','Artist Followers','Tempo']
-y_axis = st.sidebar.selectbox('Select Y-as', y_options,key="a")
+x_options = ['Artist Followers','Duration (ms)','Tempo','Streams'] #selectbox options
+x_axis = st.selectbox('Select X-as', x_options)
 fig = px.scatter(df, 
         x=x_axis,
-        y=y_axis,
+        y='Streams',
         hover_name='Streams',
-        title=f'{y_axis} compared to {x_axis}',
+        title=f'Streams compared to {x_axis}',
         color = "Tempo",
         trendline="lowess")
 #creating a scatter plot 
 st.plotly_chart(fig)
 
-#outputs: plot, than the evaluaded streams
-#st.plotly_chart(SpotifyApp.data)
-
-
-#confirming
-#st.balloons()
-#st.success('NICEEEE')
-#print(kaas)
