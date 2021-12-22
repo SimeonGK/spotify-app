@@ -28,6 +28,9 @@ class SpotifyApp:
         self.data.loc[:,"Duration (ms)"] = pd.to_numeric(self.data["Duration (ms)"],errors = 'coerce')
         #drop Null/NaN/NaT Values
         self.data = self.data.dropna()
+
+    def __repr__(self) -> str:
+        return str(self.data.describe())
     
     def predict_streams(self, followers, tempo, duration):
         #create train and test set
@@ -53,6 +56,29 @@ class SpotifyApp:
         streams = regr.predict(input)
         return streams
 
-    def predict_highest_chart(self, followers, tempo, duration, streams):
-        pass
+    def predict_highest_charting_position(self, followers, tempo, duration):
+        #create train and test set
+        train = self.data.drop(['Streams','Highest Charting Position','Index', 'Genre'], axis=1)
+        test = self.data.loc[:,'Highest Charting Position']
+        x_train, x_test, y_train, y_test = train_test_split(train, test, test_size=0.3,random_state=2)
 
+        #create regression model
+        regr = LinearRegression()
+        
+        #train regression model
+        regr.fit(x_train,y_train)
+
+        #predict total streams
+        pred = regr.predict(x_test)
+        
+        #check accuracy
+        acc = regr.score(x_test, y_test)
+        print(acc)
+        
+        #predict stream from input
+        input = [[followers, tempo, duration]]
+        prediction = regr.predict(input)
+        return prediction    
+
+app = SpotifyApp("spotify_dataset.csv")
+print(app.predict_highest_charting_position(3363988,180.104,203385))
