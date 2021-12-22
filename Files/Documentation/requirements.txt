@@ -2,8 +2,8 @@ python3.9
 pandas
 numpy 
 matplotlib
-pyqt5[all]
 seaborn
 plotly
 sip
 import-ipynb
+streamlit

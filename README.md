@@ -9,7 +9,6 @@ Predicting streams with amount of subs/genre/release date
 input genre - input subs - inputs release date
 Predicting amount of subs with streams
 Predicting how long tune will be on highest charts
-Correlation of valence with release date and streams
 Construct a modified chart list from given entries.
 
 ## Project Installation
@@ -18,7 +17,7 @@ To run the software, you need to install the following tools:
 * pandas
 * numpy
 * matplotlib
-* PyQt5
+* Streamlit
 * seaborn
 
 ### (For developers:)
@@ -53,5 +52,6 @@ for new added packages, they can be added to requirements:
 To run the project:
 1. Open project directory: 'Files' in your command line
 2. Run the command: 
-    * for windows: `python SpotifyDataset.py` 
-    * for linux:   `python3 SpotifyDataset.py`
+    * for windows: `streamlit run myapp.py` 
+    * for linux:   `streamlit run myapp.py`
+3. CTRL click the link in the terminal
