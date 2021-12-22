@@ -79,6 +79,3 @@ class SpotifyApp:
         input = [[followers, tempo, duration]]
         prediction = regr.predict(input)
         return prediction    
-
-app = SpotifyApp("spotify_dataset.csv")
-print(app.predict_highest_charting_position(3363988,180.104,203385))
