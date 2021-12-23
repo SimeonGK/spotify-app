@@ -298,17 +298,15 @@ class Ui_MainWindow(QtWidgets.QWidget):
 
 	def takeinputs(self):
 		name, done1 = QtWidgets.QInputDialog.getText(
-			self, 'Input Dialog', 'Enter your name:')
+			self, 'Input Dialog', 'Enter song name:')
 		roll, done2 = QtWidgets.QInputDialog.getInt(
-		   self, 'Input Dialog', 'Enter your roll:') 
+		   self, 'Input Dialog', 'Enter amount of followers:') 
 		cgpa, done3 = QtWidgets.QInputDialog.getDouble(
-			  self, 'Input Dialog', 'Enter your CGPA:')
+			  self, 'Input Dialog', 'Enter tempo of the song:')
  
-		langs =['C', 'c++', 'Java', 'Python', 'Javascript']
-		lang, done4 = QtWidgets.QInputDialog.getItem(
-		  self, 'Input Dialog', 'Language you know:', langs)
+		
  
-		if done1 and done2 and done3 and done4 :
+		if done1 and done2 and done3 :
 			 # Showing confirmation message along
 			 # with information provided by user.
 			self.label2.setText('Information stored Successfully')
